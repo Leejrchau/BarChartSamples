@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbw-fV-J27" customClass="RCMBarChartCoordinateView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCA-4p-F13" customClass="RCMBarChartView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SCA-4p-F13" secondAttribute="bottom" constant="70" id="3iF-dj-CzB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mbw-fV-J27" secondAttribute="bottom" constant="90" id="Ckt-lY-qmc"/>
+                            <constraint firstItem="mbw-fV-J27" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="90" id="D5Q-vy-inQ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="183"/>
+                            </constraint>
+                            <constraint firstItem="SCA-4p-F13" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="143" id="Ds4-KH-rAr"/>
+                            <constraint firstItem="SCA-4p-F13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="200" id="SDt-T3-rvq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SCA-4p-F13" secondAttribute="trailing" constant="195" id="avG-Pf-hhL"/>
+                            <constraint firstItem="mbw-fV-J27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="140" id="hqX-r4-4z2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="102"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="mbw-fV-J27" secondAttribute="trailing" constant="140" id="vk8-oG-NAM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mbw-fV-J27"/>
+                                <exclude reference="SCA-4p-F13"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="D5Q-vy-inQ"/>
+                                <exclude reference="hqX-r4-4z2"/>
+                                <exclude reference="vk8-oG-NAM"/>
+                                <exclude reference="Ds4-KH-rAr"/>
+                                <exclude reference="SDt-T3-rvq"/>
+                                <exclude reference="avG-Pf-hhL"/>
+                                <exclude reference="3iF-dj-CzB"/>
+                                <exclude reference="Ckt-lY-qmc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="mbw-fV-J27"/>
+                                <include reference="SCA-4p-F13"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="D5Q-vy-inQ"/>
+                                <include reference="hqX-r4-4z2"/>
+                                <include reference="vk8-oG-NAM"/>
+                                <include reference="Ds4-KH-rAr"/>
+                                <include reference="SDt-T3-rvq"/>
+                                <include reference="avG-Pf-hhL"/>
+                                <include reference="3iF-dj-CzB"/>
+                                <include reference="Ckt-lY-qmc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="SCA-4p-F13" id="jjT-lI-hSV"/>
+                        <outlet property="coorDinateView" destination="mbw-fV-J27" id="4Vl-5t-jIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W5T-eC-KT4">
+            <objects>
+                <viewController id="ccm-Y2-7Aj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tKd-KQ-fW5"/>
+                        <viewControllerLayoutGuide type="bottom" id="NjR-fc-P3A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hyI-Z2-MDy">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkg-ut-MXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
